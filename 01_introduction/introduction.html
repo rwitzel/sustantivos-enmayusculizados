@@ -1,0 +1,34 @@
+<div class="business_letter" ng-controller="transcriberCtrl">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="spanish_text">Spanish text</label>
+                    <textarea id="spanish_text" class="form-control" rows="30" ng-model="params.spanish_text"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <span class="control-label"
+                  style="display: inline-block; max-width: 100%; margin-bottom: 5px; font-weight: bold;">Texto de lectura rápida</span>
+            <div contenteditable="true" ng-model="sustmayo_html"
+                style="padding: 6px 12px;"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <form class="pull-right form-inline">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="params.highlight_transformed_words"> Resalte la ortografía modificada
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+

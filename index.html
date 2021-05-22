@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sustantivos enmayusculizados</title>
+
+    <!-- shared resources -->
+    <link href="favicon.ico?" rel="shortcut icon" type="image/x-icon">
+    <script src="00_common/lib/jquery-1.11.3.min.js"></script>
+    <link href="00_common/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="00_common/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="00_common/lib/angular.min.js"></script>
+    <link href="00_common/common.css" rel="stylesheet">
+
+    <!-- module-specific styles -->
+    <link href="01_introduction/introduction.css" rel="stylesheet">
+</head>
+<body>
+
+    <section class="bg-primary text-center">
+        <div class="container">
+            <div class="row dd-lg-flex-box">
+                <div class="col-lg-12 col-sm-12 dd-lg-flex-item">
+
+                    <span><img src="01_introduction/img/logo_lowres.png" width="200" /></span>
+
+                    <h1>Sustantivos enmayusculizados<sup><span style="font-size: x-small"> v0.1</span></sup></h1>
+                    <p>
+                        Aumentar la velocidad de lectura. En línea en el navegador. No se recogen datos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div ng-app="prototypeApp">
+        <div class="container">
+            <div class="row dd-lg-flex-box">
+                <div class="col-lg-12 col-sm-12 dd-lg-flex-item sustmayo_main">
+
+                    <div ng-include="'01_introduction/introduction.html'"></div>
+                    <div class="end_of_page_spacer">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="bg-primary text-center">
+        <div class="container">
+            <div class="row dd-lg-flex-box">
+                <div class="col-lg-12 col-sm-12 dd-lg-flex-item sustmayo_footer">
+                    <p>
+                        Gracias por utilizar <i>Sustantivos enmayusculizados</i>.
+                    </p>
+
+                    <p>
+                        La idea original proviene del libro
+                        <i>Dr. Héctor Calle. Proyecto de idioma global.
+                            Misti Verlag. 2015.</i>
+                        <a href="https://www.misti-verlag.de/linguistik-sprachwissenschaft/inter%C3%B1ol-dr-h%C3%A9ctor-calle/"
+                           title="Link to book" target="_blank"><span class="glyphicon glyphicon-new-window"
+                            style="color:white !important;"></span></a>.
+                    </p>
+
+                    <p>
+                        Este sitio web es mantenido por <a href="https://github.com/rwitzel/" target="_blank"
+                                                         style="color:white !important;"><i>Rodrigo Witzel</i></a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- shared code -->
+    <script src="00_common/common.js"></script>
+    <script src="00_common/object_store.js"></script>
+    <script src="00_common/app.js"></script>
+
+    <!-- module-specific code -->
+    <script src="01_introduction/object_editor.js"></script>
+    <script src="01_introduction/spanish_text_examples.js"></script>
+    <script src="01_introduction/spanish_no_nouns.js"></script>
+    <script src="01_introduction/spanish_nouns.js"></script>
+    <script src="01_introduction/spanish_adjectives.js"></script>
+    <script src="01_introduction/text_splitter.js"></script>
+    <script src="01_introduction/rules.js"></script>
+    <script src="01_introduction/transcriber.js"></script>
+
+</body>
+</html>

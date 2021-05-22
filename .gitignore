@@ -1,0 +1,9 @@
+.idea
+*.iml
+_site
+*.ipynb
+__pycache__
+Gemfile.lock
+venv
+.jekyll-cache
+/es-en.xml
