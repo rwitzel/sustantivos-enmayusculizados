@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Democracy Index 2020 vs. EM 2021 outcome (first group matches)</title>
+</head>
+<body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
+
+<div style="width:800px !important; height:600px !important;">
+<canvas id="myChart" ></canvas>
+</div>
+
+<script>
+
+ctx = document.getElementById("myChart").getContext("2d");
+
+colors = ["black", "orange", "orange", "black", "black", "black", "black", "orange", "orange", "orange", "black", "orange", "black", "orange", "orange", "black", "black", "black", "black", "orange", "orange", "orange", "black", "orange"];
+point_data = [
+  {
+    "x":4.48,
+    "y":-3
+  },
+  {
+    "x":8.54,
+    "y":0
+  },
+  {
+    "x":9.15,
+    "y":-1
+  },
+  {
+    "x":7.51,
+    "y":3
+  },
+  {
+    "x":8.54,
+    "y":1
+  },
+  {
+    "x":8.16,
+    "y":2
+  },
+  {
+    "x":8.96,
+    "y":1
+  },
+  {
+    "x":8.54,
+    "y":-2
+  },
+  {
+    "x":6.85,
+    "y":-1
+  },
+  {
+    "x":8.12,
+    "y":0
+  },
+  {
+    "x":6.56,
+    "y":-3
+  },
+  {
+    "x":7.99,
+    "y":1
+  },
+  {
+    "x":7.74,
+    "y":3
+  },
+  {
+    "x":8.83,
+    "y":0
+  },
+  {
+    "x":9.2,
+    "y":1
+  },
+  {
+    "x":3.31,
+    "y":-3
+  },
+  {
+    "x":6.5,
+    "y":-1
+  },
+  {
+    "x":5.89,
+    "y":-2
+  },
+  {
+    "x":5.81,
+    "y":-1
+  },
+  {
+    "x":7.67,
+    "y":2
+  },
+  {
+    "x":6.97,
+    "y":1
+  },
+  {
+    "x":9.26,
+    "y":0
+  },
+  {
+    "x":7.9,
+    "y":3
+  },
+  {
+    "x":8.67,
+    "y":-1
+  }
+];
+
+labels = ["Turkey (Turkey - Italy: -3)", "Wales (Wales - Switzerland: 0)", "Denmark (Denmark - Finland: -1)", "Belgium (Belgium - Russia: 3)", "England (England - Croatia: 1)", "Austria (Austria - North Macedonia: 2)", "Netherlands (Netherlands - Ukraine: 1)", "Scotland (Scotland - Czech Republic: -2)", "Poland (Poland - Slovakia: -1)", "Spain (Spain - Sweden: 0)", "Hungary (Hungary - Portugal: -3)", "France (France - Germany: 1)", "Italy (Italy - Turkey: 3)", "Switzerland (Switzerland - Wales: 0)", "Finland (Finland - Denmark: 1)", "Russia (Russia - Belgium: -3)", "Croatia (Croatia - England: -1)", "North Macedonia (North Macedonia - Austria: -2)", "Ukraine (Ukraine - Netherlands: -1)", "Czech Republic (Czech Republic - Scotland: 2)", "Slovakia (Slovakia - Poland: 1)", "Sweden (Sweden - Spain: 0)", "Portugal (Portugal - Hungary: 3)", "Germany (Germany - France: -1)"];
+
+let data = {
+    datasets: [{
+        label: "EM 2020 Matches - by democracy index and goal difference (Group stage - Matchday 1)",
+        labels: labels,
+        pointBackgroundColor: colors,
+        data: point_data,
+        backgroundColor: "white"
+    }]
+}
+
+let options = {
+    plugins: {
+        tooltip: {
+            callbacks: {
+                label: function(ctx) {
+                    let label = ctx.dataset.labels[ctx.dataIndex];
+                    label += " (" + ctx.parsed.x + ", " + ctx.parsed.y + ")";
+                    return label;
+                }
+            }
+        }
+    }
+}
+
+options = {
+      responsive: true,
+      scales: {
+        x: {
+          title: {
+              display: true,
+              text: "Democracy Index 2020 (source: Wikipedia)"
+          }
+        },
+        y: {
+          title: {
+              display: true,
+              text: "Goal difference in match"
+          }
+        }
+
+      }
+    };
+
+chart = new Chart(ctx, {
+    type: "scatter",
+    data: data,
+    options: options
+});
+
+</script>
+
+</body>
+</html>
